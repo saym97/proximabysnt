@@ -13,8 +13,7 @@ const proxima = mysql.createConnection({
     host: 'sql7.freesqldatabase.com',
     user: 'sql7295206',
     password: 'uDQL4RIWiS',
-    database: 'sql7295206',
-    port: '3306'
+    database: 'sql7295206'
 });
 
 /*proxima.connect((err) => {
