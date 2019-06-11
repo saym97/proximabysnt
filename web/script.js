@@ -35,8 +35,8 @@ $.getJSON('/proxima/playerIdName', (data) => {
 
 var date = new Date();
 $.getJSON('/proxima/time', (data) => {
-    //console.log(new Date())
-    //console.log(new Date(Date.parse(data[0].start_time)))
+    console.log(new Date())
+    console.log(new Date(Date.parse(data[0].start_time)))
     timer = (Math.floor((date - new Date(Date.parse(data[0].start_time))) / 1000));
    console.log('timer', timer)
 });
