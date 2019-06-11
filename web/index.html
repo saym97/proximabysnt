@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/proxima.png" type="image/png" sizes="16x16">
+	<title>P R O X I M A</title>
+	<link rel="stylesheet" type="text/css" href="indexstyle.css">
+</head>
+
+<body>
+	<!-- <img src="images/planet.jpg"> -->
+	<div id="image"></div>
+	<h1>PROXIMA</h1>
+	<form action='/login' method="POST">
+		<div><label for='username'>Username</label>
+			<label for="password">Password</label>
+		</div>
+		<div><input id='username' type="text" name="username" placeholder="Username">
+			<input id='password' type="password" name="password" placeholder="Password">
+		</div>
+		<br>
+		<input id='checkbox' type="checkbox" onclick="showPassword()"><label for="checkbox">Show Password</label><br>
+		<button type="submit">Login</button><br>
+		<a href="/register">Register</a>
+		<a href="/proxima">Proxima</a>
+	</form>
+	<div id='uniLogo'>
+		<div id='credits' >Muhammad Usama<br>Tiago Guerra</div><img src="images/unilogo.png">
+	</div>
+</body>
+
+<script>
+	let checkbox = document.getElementById('checkbox');
+	let password = document.getElementById('password');
+	function showPassword() {
+		if (checkbox.checked) {
+			password.type = 'text';
+		} else {
+			password.type = 'password';
+		}
+	}
+
+	let credopen = false
+	document.getElementById('credits').onclick = function() {
+		if (!credopen){
+			let credits = document.getElementById('credits')
+			credits.style.height = '25vh'
+			credits.style.fontSize = '1.2vw'
+			credits.style.transition= ' height 0.5s ease-in';
+			credits.innerHTML = '<b>Developers:</b><br>Muhammed Usama<br>Tiago Guerra<br><br><b>Game art:</b><br>Icons made by SmashIcons, Freepik, Flat Icons, Nhor Phai, from www.flaticon.com'
+			credopen = true
+		}else if (credopen){
+			credits.style.height = '9vh'
+			credits.style.fontSize = '1.8vw'
+			credits.innerHTML = 'Muhammad Usama<br>Tiago Guerra'
+			credopen = false
+		}
+	}
+
+
+
+
+	// let body = document.getElementsByTagName('body');
+	// body[0].style.width = window.width;
+	// body[0].style.height= window.height;
+
+
+
+</script>
+
+</html>

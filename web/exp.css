@@ -1,0 +1,409 @@
+html {
+    /* background-image: url("images/planet.jpg"); */
+    background-color: rgb(9, 120, 72);
+    background-size :110%;
+    background-blend-mode: lighten;
+    /* overflow: hidden; */
+}
+header {
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+
+}
+header div {
+    width: 75%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    border: 2px solid black;
+    background-color: rgb(94, 188, 255);
+
+}
+
+body {
+    display: inline-flex;
+    /* grid-auto-columns: auto; */
+    /* flex-direction: column; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /*outline: 2px solid red;*/
+}
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size : 20px;
+}
+
+#canvas {
+    width: 900px;
+    margin-left: 0px;
+    /*outline: 2px solid aliceblue;*/
+}
+
+#resources {
+    width: 100%;
+     height: 490px; 
+    background-color: rgb(50, 161, 113);
+    border: 2px solid black;
+    /* position: absolute; */
+    z-index: 1;
+    background-image: url('images/k.jpg');
+    background-size: contain;
+}
+
+.resources {
+    border: 2px solid black;
+    background-color: rgb(94, 188, 255);
+    margin-top: 6px;
+    width: 200px;
+    height: 39px;
+    box-shadow: 0px 1px 21px -2.5px rgba(0,0,0,0.9);
+    background-image: url('images/credittab1.png');
+    background-size: 100%;
+    /*! margin: auto; */
+    margin: auto;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+
+/* #crdts{
+    background-image: url('images/credittab.png');
+    background-size: 100%;
+} */
+
+#cardninfo {
+    width: 420px;
+    height: 97%;
+    /* outline: 2px solid yellow; */
+    position: absolute;
+    left: 1100px;
+			/* bottom: 100px; */
+    /*! display: grid; */
+    /*! grid-template-rows: 3fr 1fr; */
+    background-image: url('images/k.jpg');
+}
+
+#cards {
+    width: 400px;
+    height: 500px;
+    background-color: rgb(219, 191, 114);
+    border: 2px solid black;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+    /* position: absolute; */
+    /* left: 73%;
+			bottom: 200px; */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(3, 85, 55) rgb(219, 191, 114);
+    margin: auto;
+    margin-top: 5px;
+}
+
+#infotab {
+    background-color: rgb(124, 122, 70);
+    border: 4px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-style: ridge;
+    width: 400px;
+    height: 180px;
+    font-size: 20px;
+    position: relative;
+    /* left: 73.25%; */
+    /* bottom: 50px; */
+    margin: auto;
+    margin-top: 5px;
+}
+
+#infotab button{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(126, 93, 21);
+    position: relative;
+    font-size: 10px;
+    top:45%;
+    left: 30%;
+}
+
+
+.slots,
+.marketslots {
+    width: 110px;
+    height: 170px;
+    border: 2px solid black;
+    background-color: rgb(233, 162, 9);
+    display: inline-flex;
+    margin: 5px 5px 5px 5px;
+}
+
+/* .marketslots .imgdiv{
+    outline : 2px solid greenyellow;
+    width:110px;
+    height: 20px; 
+
+   
+}
+
+.marketslots img{
+    position: relative;
+    right: 50px;
+    top: 50%;
+    width:64px ;
+    height: 64px;
+
+} */
+
+canvas {
+    outline: 5px solid rgb(21, 160, 8);
+}
+
+#market, #trading {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(170, 152, 94);
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-top: 5px; 
+    z-index: 2;
+}
+#market:hover, #trading:hover{
+    box-shadow: 0px 1px 21px -1px rgba(0,0,0,0.9);
+}
+
+#tradingSection{
+    width : 0px;
+    height: 0px;
+    border: 2px solid black;
+    background: rgb(195, 180, 131);
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    transform : translate(200px,0px);
+    overflow: hidden;
+}
+
+#tradingSection button{
+    display: inline;
+    overflow-x: hidden;
+}
+#tradingSection #dropdown{
+    height: 300px;
+    width: 500px;
+    border: 2px solid rgb(0, 255, 166);
+    margin-top: 3px;
+    display:grid;
+    grid-template-columns: 1fr;
+
+    
+    /* grid-template-columns: 50% 50% ; */
+    /* grid-template-columns: 1fr 1fr 1fr 2fr; */
+    
+}
+#tradingSection button{
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+
+#tradingSection input{
+    width : 50px;
+    
+}
+#myDeals {
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.completedOfferTab, .placedOfferTab,.allDealsTab{
+    height: 20px;
+    padding: 5px;
+    width: 94%;
+    background-color: rgba(153, 133, 66, 0.694);
+    margin-left: 5px;
+    box-shadow: 0px 1px 21px -4px rgba(110, 96, 48, 0.9);
+    border: 1px solid rgba(124, 109, 58, 0.9);
+    margin-top:3px;
+    
+    
+}
+/* #deals {
+    display:grid;
+     height: 100%; 
+    grid-template-columns: 1fr 2fr; 
+} */
+#placedDeals, #completedDeals,#allDeals {
+    width:100%;
+    height:180px;
+    text-align: center;
+    border: 4px solid rgb(109, 83, 0);
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(3, 85, 55) rgb(195, 180, 131);
+    
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input, select{
+ height: 1.7em;
+ border: 2px solid rgb(116, 81, 7);
+border-radius: 10%;
+}
+
+button[type="submit"]{
+border: 2px solid black;
+border-radius: 10%;
+width: 50px;
+height: 2em;
+background-color:rgb(131, 109, 39) ;
+}
+
+strong{
+       color: rgb(68, 0, 216); 
+}
+
+#filterSearch{
+    width : 200px;
+    height:150px;
+    
+    /*outline: 2px solid rgb(22, 39, 33);*/
+}
+
+#allDeals{
+    width: 300px;
+    height:150px;
+    
+}
+
+#marketcards {
+    border: 2px solid black;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    transform : translate(200px,0px);
+    background-color : rgb(50, 161, 113);
+    z-index: 2;
+}
+
+#buybutton {
+    float: right;
+    margin-top: 155px;
+    margin-right: 5px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    width: 60px;
+    height: 30px;
+}
+
+#timer {
+    background-color: rgb(50, 161, 113);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2px;
+}
+/* 
+#cardinfo {
+    height: 450px;
+    width: 50px;
+    position: relative;
+    top: 8px;
+    left: 205px;
+    visibility: hidden;
+    display: flex;
+} */
+
+.cardinfo {
+    visibility: hidden;
+    float: right;
+    height: 24px;
+    width: 27px;
+    text-align: center;
+    padding-top: 3px;
+    border: 2px solid black;
+    /* margin-bottom: 15px; */
+    border-radius: 100%;
+    position: relative;
+    bottom: 27%;
+    
+}
+
+.Gain {
+    float: right;
+    font-weight: bold;
+    position: relative;
+    bottom: 5px;
+    margin-right: 5%;
+}
+
+.blink {
+    background-color: rgb(149, 46, 46);
+}
+
+.shakeeffect {
+    animation: shake 0.5s;
+    background-color: rgb(149, 46, 46);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 0px);
+    }
+    10% {
+        transform: translate(-1px, 0px);
+    }
+    20% {
+        transform: translate(-3px, 0px);
+    }
+    30% {
+        transform: translate(3px, 0px);
+    }
+    40% {
+        transform: translate(1px, 0px);
+    }
+    50% {
+        transform: translate(-1px, 0px);
+    }
+    60% {
+        transform: translate(-3px, 0px);
+    }
+    70% {
+        transform: translate(3px, 0px);
+    }
+    80% {
+        transform: translate(-1px, 0px);
+    }
+    90% {
+        transform: translate(1px, 0px);
+    }
+    100% {
+        transform: translate(1px, 0px);
+    }
+}
+
+#leftSection {
+    /* width:16%; */
+    height: 710px;
+    width: 210px;
+    /* border: 2px solid black; */
+    /* display: grid; */
+    /* grid-template-columns: 3.5fr 0.70fr;  */
+    /*outline: 3px solid yellow;*/
+    /* grid-template-rows: 2fr;  */
+}
+
+@media only screen and (max-width: 990px) {
+    #vv {
+        height: 400px;
+    }
+}

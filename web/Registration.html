@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jQuery.js"></script>
+	<link rel="stylesheet" type="text/css" href="Registration.css">
+	<link rel="icon" href="images/proxima.png" type="image/png" sizes="16x16">
+	<title> P R O X I M A</title>
+
+</head>
+
+<body>
+	<h1>Registration</h1>
+	<form method="POST" action="/register/register">
+		<div>
+			<label for="FirstName">First Name: </label> 
+				<label for="LastName">Last Name: </label> 
+					<label for="username"> Username: </label>
+						<label for="email"> Email:</label>
+							<label for="Password">Password: </label>
+							<label for="faction"> Faction:</label>
+		</div>
+<div>
+		
+		<input type="text" name="firstName" placeholder="First Name" maxlength="15">
+		<input type="text" name="lastName" placeholder="Last Name" maxlength="15">
+		<input name="userName" placeholder="Username" maxlength="10">
+		<input type = 'email' name="email" placeholder="Email">
+		<input type="password" name="password" placeholder="Password">
+		<select name="faction">
+			
+			<option value="2">Ecologists</option>
+			<option value = '3'>Industrialists</option>
+			<option value = '1'>Technocrats</option>
+		</select>
+
+</div>
+
+			<div><button type='submit' class="btn">Submit</button></div>
+	</form>
+</body>
+
+</html>
