@@ -13,7 +13,7 @@ const proxima = mysql.createConnection({
 
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/web/registration.html'))
+    res.sendFile(path.join(__dirname + '/web/Registration.html'))
 });
 
 router.post('/register', (req, res) => {
