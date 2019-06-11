@@ -27,8 +27,7 @@ var connection = {
     host: 'sql7.freesqldatabase.com',
     user: 'sql7295206',
     password: 'uDQL4RIWiS',
-    database: 'sql7295206',
-    port: '3306'
+    database: 'sql7295206'
 }
 var sessionStore = new mySqlSession(connection);
 app.use(session({
@@ -45,10 +44,10 @@ app.use('/register', registration)
 app.use('/proxima', game);
 
 const proxima = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '12345',
-    database: 'proxima'
+host: 'sql7.freesqldatabase.com',
+    user: 'sql7295206',
+    password: 'uDQL4RIWiS',
+    database: 'sql7295206'
 });
 
 passport.use(new strategy(
