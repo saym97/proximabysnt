@@ -38,7 +38,7 @@ $.getJSON('/proxima/time', (data) => {
     //console.log(new Date())
     //console.log(new Date(Date.parse(data[0].start_time)))
     timer = (Math.floor((date - new Date(Date.parse(data[0].start_time))) / 1000));
-    //console.log('timer', timer)
+   console.log('timer', timer)
 });
 
 
