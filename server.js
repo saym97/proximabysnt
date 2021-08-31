@@ -17,10 +17,10 @@ var passport = require('passport');
 var strategy = require('passport-local').Strategy;
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static('web'))
 
 var connection = {
@@ -43,12 +43,7 @@ app.use('/', login)
 app.use('/register', registration)
 app.use('/proxima', game);
 
-const proxima = mysql.createConnection({
-host: 'sql7.freesqldatabase.com',
-    user: 'sql7295206',
-    password: 'uDQL4RIWiS',
-    database: 'sql7295206'
-});
+const proxima = mysql.createConnection(connection);
 
 passport.use(new strategy(
     function (username, password, res) {
